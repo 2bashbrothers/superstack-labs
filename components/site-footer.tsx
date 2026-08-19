@@ -47,12 +47,12 @@ export function SiteFooter() {
               can verify.
             </p>
             <dl className="mt-6 flex flex-col gap-1 text-sm text-primary-foreground/70">
-              <div className="flex gap-2">
+              {/* <div className="flex gap-2">
                 <dt className="sr-only">Address</dt>
                 <dd className="font-mono text-xs uppercase tracking-wider">
                   {site.address}
                 </dd>
-              </div>
+              </div> */}
               <div className="flex gap-2">
                 <dt className="sr-only">Email</dt>
                 <dd className="font-mono text-xs uppercase tracking-wider">

@@ -2,9 +2,9 @@ export const site = {
   name: "Superstack Analytical",
   shortName: "Superstack",
   tagline: "Independent Analytical Testing Laboratory",
-  email: "[LAB EMAIL]",
-  address: "[LAB ADDRESS]",
-  location: "[LABORATORY LOCATION]",
+  email: "info@superstacklabs.com",
+  address: "9528 25 Hwy, Halton Hills, ON L9T 2X7",
+  location: "Halton Hills, ON, Canada",
 } as const;
 
 export const mainNav = [
