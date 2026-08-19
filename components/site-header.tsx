@@ -61,11 +61,11 @@ export function SiteHeader() {
             COA Lookup
           </Link>
           <Button
-            render={<Link href="/contact" />}
+            render={<Link href="/order" />}
             nativeButton={false}
             className="h-9 px-4"
           >
-            Request Testing
+            Order Analysis
           </Button>
         </div>
 
@@ -110,11 +110,11 @@ export function SiteHeader() {
               </nav>
               <div className="mt-auto flex flex-col gap-3 border-t border-border p-4">
                 <Button
-                  render={<Link href="/contact" />}
+                  render={<Link href="/order" />}
                   nativeButton={false}
                   className="h-11 w-full"
                 >
-                  Request Testing
+                  Order Analysis
                 </Button>
               </div>
             </SheetContent>

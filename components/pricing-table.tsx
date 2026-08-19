@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { SearchIcon } from "lucide-react";
-import { pricing, pricingCategories } from "@/lib/pricing";
+import Link from "next/link";
+import { ArrowRightIcon, SearchIcon } from "lucide-react";
+import { pricing, pricingCategories, slugify } from "@/lib/pricing";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { cn } from "@/lib/utils";
 
@@ -107,16 +109,44 @@ export function PricingTable() {
                           {row.method}
                         </Badge>
                       </div>
-                      <span
-                        className={cn(
-                          "tabular shrink-0 text-right font-medium",
-                          row.price === 0 && "text-sm text-muted-foreground",
+                      <div className="flex shrink-0 items-center gap-3">
+                        <span
+                          className={cn(
+                            "tabular text-right font-medium",
+                            row.price === 0 && "text-sm text-muted-foreground",
+                          )}
+                        >
+                          {row.price === 0
+                            ? "On request"
+                            : `$${row.price.toLocaleString()}`}
+                        </span>
+                        {row.price === 0 ? (
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            render={<Link href="/contact" />}
+                            nativeButton={false}
+                            className="text-muted-foreground"
+                          >
+                            Quote
+                          </Button>
+                        ) : (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            render={
+                              <Link
+                                href={`/order?compound=${slugify(row.compound)}`}
+                              />
+                            }
+                            nativeButton={false}
+                            aria-label={`Order analysis for ${row.compound}`}
+                          >
+                            Order
+                            <ArrowRightIcon data-icon="inline-end" />
+                          </Button>
                         )}
-                      >
-                        {row.price === 0
-                          ? "On request"
-                          : `$${row.price.toLocaleString()}`}
-                      </span>
+                      </div>
                     </li>
                   ))}
                 </ul>

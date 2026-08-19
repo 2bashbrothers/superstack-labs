@@ -88,3 +88,22 @@ export const pricing: PricingRow[] = [
   { compound: "Endotoxin Testing", category: "Additional Testing", price: 190, method: "LAL Assay" },
   { compound: "Custom Method Development", category: "Additional Testing", price: 0, method: "Quoted" },
 ];
+
+/** Maximum number of samples allowed in a single order. */
+export const MAX_ORDER_QUANTITY = 25;
+
+/** Stable, URL-safe identifier derived from a compound name. */
+export function slugify(compound: string): string {
+  return compound
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+/** All compounds that can be ordered online (fixed, non-zero price). */
+export const orderableCompounds = pricing.filter((row) => row.price > 0);
+
+/** Look up an orderable compound by its slug. Returns undefined if not found or not orderable. */
+export function getOrderableBySlug(slug: string): PricingRow | undefined {
+  return orderableCompounds.find((row) => slugify(row.compound) === slug);
+}
