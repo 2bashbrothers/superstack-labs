@@ -123,7 +123,10 @@ export function RequestForm() {
         <div className="grid gap-5 sm:grid-cols-2">
           <Field>
             <FieldLabel>Compound category</FieldLabel>
-            <Select value={category} onValueChange={setCategory}>
+            <Select
+              value={category}
+              onValueChange={(value) => setCategory(value ?? "")}
+            >
               <SelectTrigger className="h-11">
                 <SelectValue placeholder="Select a category" />
               </SelectTrigger>
