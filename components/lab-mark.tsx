@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Understated scientific mark: a precision aperture / analytical crosshair
- * inscribed in a hexagonal node. Not a molecule or DNA cliché.
+ * Superstack mark: an isometric stack of analytical layers. The top layer
+ * carries a filled specimen node — the sample currently under analysis —
+ * so the glyph reads as both a "stack" and a "test/measurement".
  */
 export function LabMark({ className }: { className?: string }) {
   return (
@@ -12,18 +13,31 @@ export function LabMark({ className }: { className?: string }) {
       className={cn(className)}
       aria-hidden="true"
     >
+      {/* top layer — the specimen plane */}
       <path
-        d="M12 1.75 20.75 6.75V17L12 22L3.25 17V6.75L12 1.75Z"
+        d="M12 2.5 20.5 7 12 11.5 3.5 7 12 2.5Z"
+        fill="currentColor"
+        fillOpacity="0.16"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinejoin="round"
       />
-      <circle cx="12" cy="12" r="3.25" stroke="currentColor" strokeWidth="1.5" />
+      {/* specimen node under analysis */}
+      <circle cx="12" cy="7" r="1.35" fill="currentColor" />
+      {/* stacked layers beneath */}
       <path
-        d="M12 5.5V8.75M12 15.25V18.5M5.5 12H8.75M15.25 12H18.5"
+        d="M3.5 10.75 12 15.25 20.5 10.75"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M3.5 14.25 12 18.75 20.5 14.25"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
