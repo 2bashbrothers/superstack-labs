@@ -19,7 +19,7 @@ export type CheckoutInput = {
   idempotencyKey: string;
 };
 
-export async function startCheckoutSession(input: CheckoutInput) {
+export async function startCheckoutSession(input: CheckoutInput): Promise<string> {
   const { compoundSlug, quantity, details, idempotencyKey } = input;
 
   // Validate the compound against the server-side catalog (never trust client price).
@@ -79,6 +79,10 @@ export async function startCheckoutSession(input: CheckoutInput) {
     },
     { idempotencyKey },
   );
+
+  if (!session.client_secret) {
+    throw new Error("Stripe did not return a client secret for checkout.");
+  }
 
   return session.client_secret;
 }
