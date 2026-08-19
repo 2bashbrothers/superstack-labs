@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Halden Analytical — Independent Analytical Testing Laboratory",
-    template: "%s — Halden Analytical",
+    default: "Superstack Analytical — Independent Analytical Testing Laboratory",
+    template: "%s — Superstack Analytical",
   },
   description:
     "Independent laboratory analysis for peptides, pharmaceuticals and specialty compounds using advanced chromatographic and mass spectrometry techniques.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "purity testing",
   ],
   openGraph: {
-    title: "Halden Analytical — Independent Analytical Testing Laboratory",
+    title: "Superstack Analytical — Independent Analytical Testing Laboratory",
     description:
       "Independent laboratory analysis for peptides, pharmaceuticals and specialty compounds. Precise methods. Clear reporting. Results you can verify.",
     type: "website",

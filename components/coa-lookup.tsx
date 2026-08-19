@@ -96,7 +96,7 @@ export function CoaLookup() {
               )}
             >
               <CheckCircle2Icon className="size-5" />
-              Verified record — issued by Halden Analytical
+              Verified record — issued by Superstack Analytical
             </div>
             <CertificateResult certificate={state.certificate} />
           </div>

@@ -1,6 +1,6 @@
 export const site = {
-  name: "Halden Analytical",
-  shortName: "Halden",
+  name: "Superstack Analytical",
+  shortName: "Superstack",
   tagline: "Independent Analytical Testing Laboratory",
   email: "[LAB EMAIL]",
   address: "[LAB ADDRESS]",

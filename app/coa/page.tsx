@@ -6,7 +6,7 @@ import { Reveal } from "@/components/reveal";
 export const metadata: Metadata = {
   title: "COA Lookup",
   description:
-    "Independently verify a Halden Analytical Certificate of Analysis using its unique certificate identifier.",
+    "Independently verify a Superstack Analytical Certificate of Analysis using its unique certificate identifier.",
 };
 
 const steps = [
