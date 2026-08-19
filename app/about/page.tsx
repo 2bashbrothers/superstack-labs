@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Halden Analytical is an independent analytical testing laboratory focused on precise methods, clear reporting and verifiable results.",
+    "Superstack Analytical is an independent analytical testing laboratory focused on precise methods, clear reporting and verifiable results.",
 };
 
 const values = [
@@ -45,7 +45,7 @@ export default function AboutPage() {
         eyebrow="About the Laboratory"
         meta="Independent · Analytical"
         title="A laboratory built around clarity."
-        description="Halden Analytical is an independent analytical testing laboratory. We apply established chromatographic and mass spectrometric methods to answer specific analytical questions about submitted samples."
+        description="Superstack Analytical is an independent analytical testing laboratory. We apply established chromatographic and mass spectrometric methods to answer specific analytical questions about submitted samples."
       />
 
       {/* intro + image */}

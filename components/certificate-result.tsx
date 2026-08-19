@@ -32,7 +32,7 @@ export function CertificateResult({ certificate }: { certificate: Certificate })
               Certificate of Analysis
             </span>
             <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
-              Halden Analytical
+              Superstack Analytical
             </span>
           </div>
         </div>
