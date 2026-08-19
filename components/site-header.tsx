@@ -95,6 +95,7 @@ export function SiteHeader() {
                     <SheetClose
                       key={item.href}
                       render={<Link href={item.href} />}
+                      nativeButton={false}
                       className={cn(
                         "rounded-md px-3 py-2.5 text-base font-medium transition-colors",
                         active
