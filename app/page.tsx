@@ -1,13 +1,25 @@
-import Image from "next/image";
-import { Button } from "@/components/ui/button"
+import { Hero } from "@/components/hero";
+import { CapabilitiesStrip } from "@/components/capabilities-strip";
+import { UncoverTruth } from "@/components/uncover-truth";
+import { CapabilitiesSection } from "@/components/capabilities-section";
+import { TestingProcess } from "@/components/testing-process";
+import { CoaPreview } from "@/components/coa-preview";
+import { PrinciplesSection } from "@/components/principles-section";
+import { WhyClients } from "@/components/why-clients";
+import { CtaSection } from "@/components/cta-section";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans">
-      <main className="flex w-full max-w-3xl flex-col items-center py-32 px-16">
-        <h1>Superstack Labs</h1>
-        <Button variant="outline">Button</Button>
-      </main>
-    </div>
+    <>
+      <Hero />
+      <CapabilitiesStrip />
+      <UncoverTruth />
+      <CapabilitiesSection />
+      <TestingProcess />
+      <CoaPreview />
+      <PrinciplesSection />
+      <WhyClients />
+      <CtaSection />
+    </>
   );
 }
