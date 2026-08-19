@@ -12,6 +12,7 @@ export const mainNav = [
   { title: "Testing", href: "/testing" },
   { title: "COA Lookup", href: "/coa" },
   { title: "Pricing", href: "/pricing" },
+  { title: "Order", href: "/order" },
   { title: "About", href: "/about" },
   { title: "Contact", href: "/contact" },
 ] as const;
