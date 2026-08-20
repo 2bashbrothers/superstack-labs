@@ -51,7 +51,7 @@ function QrMark({ value }: { value: string }) {
 
   return (
     <div
-      className="size-[74px] rounded-md border border-primary/20 bg-white p-2"
+      className="coa-qr-mark size-[74px] rounded-md border border-primary/20 bg-white"
       aria-label={`QR code for ${verificationUrl}`}
       role="img"
     >
@@ -245,7 +245,7 @@ export function CoaCertificate({ certificate }: { certificate: Certificate }) {
           value={certificate.verificationId}
         />
 
-        <div className="flex items-center justify-center">
+        <div className="coa-qr-cell flex items-center justify-center">
           <QrMark value={certificate.verificationId} />
         </div>
        

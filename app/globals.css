@@ -246,8 +246,9 @@
 
   .coa-meta-grid {
     display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-columns: 1fr 1fr 1fr 28mm !important;
     gap: 2mm !important;
+    align-items: center !important;
   }
 
   .coa-meta-grid > div {
@@ -256,10 +257,27 @@
     padding: 2mm !important;
   }
 
+  .coa-qr-cell {
+    min-height: 28mm !important;
+    padding: 0 !important;
+  }
+
+  .coa-qr-mark {
+    width: 28mm !important;
+    height: 28mm !important;
+    border-radius: 1mm !important;
+    padding: 1mm !important;
+  }
+
   .coa-meta-grid svg,
   .coa-summary-grid svg {
     width: 3.8mm !important;
     height: 3.8mm !important;
+  }
+
+  .coa-qr-mark svg {
+    width: 100% !important;
+    height: 100% !important;
   }
 
   .coa-meta-grid p {
