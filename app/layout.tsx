@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
-import { TooltipProvider } from "@/components/ui/tooltip";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -51,13 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         "font-sans",
       )}
     >
-      <body className="min-h-full flex flex-col">
-        <TooltipProvider>
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-        </TooltipProvider>
-      </body>
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }

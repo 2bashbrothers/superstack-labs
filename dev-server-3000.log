@@ -1,0 +1,14 @@
+▲ Next.js 16.3.1 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+- Environments: .env
+✓ Ready in 907ms
+✓ Running next.config.ts took 81ms
+Creating turbopack project { dir: 'C:\\dev\\projects\\superstack-labs', testMode: true }
+
+ GET /payments 200 in 3.1s (next.js: 2.8s, application-code: 316ms)
+ GET /payments 200 in 70ms (next.js: 13ms, application-code: 57ms)
+ GET /payments 200 in 62ms (next.js: 10ms, application-code: 52ms)
+ GET / 200 in 1729ms (next.js: 1291ms, application-code: 439ms)
+[?25h
+[ELIFECYCLE] Command failed with exit code 1.
