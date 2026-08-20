@@ -12,10 +12,9 @@ import {
 } from "@/components/ui/table";
 
 const meta = (c: Certificate) => [
-  { label: "Certificate ID", value: c.id, mono: true },
+  { label: "Verification ID", value: c.verificationId, mono: true },
+  { label: "Sample ID", value: c.id, mono: true },
   { label: "Compound", value: c.compound },
-  { label: "Category", value: c.category },
-  { label: "Sample type", value: c.sampleType },
   { label: "Date received", value: c.dateReceived, mono: true },
   { label: "Date reported", value: c.dateReported, mono: true },
 ];

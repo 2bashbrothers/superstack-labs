@@ -54,12 +54,12 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link
+          {/* <Link
             href="/coa"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             COA Lookup
-          </Link>
+          </Link> */}
           <Button
             render={<Link href="/order" />}
             nativeButton={false}
